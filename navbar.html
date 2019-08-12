@@ -1,0 +1,204 @@
+<!Doctype html>
+
+<html lang="en">
+
+<head>
+
+    <title>Responsive Navbar</title>
+
+    <!--Meta Tag-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--CDN-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous">
+  
+
+    <!--Link Tags for Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="images\navbar.css" />
+    <!-- Script -->
+    <script>
+      $(document).ready(function () {
+      $("#input").click(function () {
+
+        $(".para2").show();
+
+      });
+      $("#readless").click(function () {
+
+        $(".para2").toggle();
+
+      });
+    });
+    function ValidateEmail(inputText)
+    {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if(inputText.value.match(mailformat))
+      {
+        document.form1.text1.focus();
+        return true;
+      }
+      else
+      {
+        alert("You have entered an invalid email address!");
+        document.form1.text1.focus();
+        return false;
+      }
+    }
+
+    function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+function validate_form()
+{
+  var str=" ";
+  var c=0;
+valid = true;
+if($('input[type=checkbox]:checked').length == 0)
+{
+  str+="ERROR! Please select at least one checkbox    ";
+  c++;
+    valid = false;
+}
+var e = document.getElementById("select");
+var strUser = e.options[e.selectedIndex].value;
+var strUser1 = e.options[e.selectedIndex].text;
+if(strUser==0)
+{
+  str+="and Please select a location";
+  c++;
+}
+if(c!=0)
+{
+alert(str);
+}
+return valid;
+}
+
+    </script>
+
+</head>
+
+<body>
+
+  <!--Skip to main content-->
+  <a href="#job-description-inputbox" class="skip_to_main"> Skip to main content</a>
+
+  <!--Navbar-->
+  <div class="jumbotron banner1" id="banner1">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img aria-label="Logo" src="images\twobytes.png" alt="LOGO" />
+        </a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+         aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-right" id="navbar">
+            <ul role="menu" class="navbar-nav">
+              <li role="menuitem" class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li role="menuitem" class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li role="menuitem" class="nav-item">
+                <a class="nav-link" href="#">Jobs</a>
+              </li>
+              <li role="menuitem" class="nav-item">
+                <a class="nav-link" href="#">Clients</a>
+              </li>
+              <li role="menuitem" class="nav-item">
+                <a class="nav-link" href="#">Employers</a>
+              </li>
+              </li>
+              <li role="menuitem" class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+        </div>
+    </nav>    
+    <!-- Navbar Ends -->
+    <div class="container" id="section1" id="form1">
+      <form name="jobsearch" class="form-inline">       
+        <label class="looking-text">I'm looking for...</label>
+        <input type="text" class="form-control mt-3 mb-3  mr-sm-3" name="job description" id="job-description-inputbox" placeholder="Enter a Job Description" required>
+        <div class="input-group-btn">
+            <button type="button" id="job-search-button" role="submit" aria-label="submit" class="btn" id="submit"> 
+              <i class="fas fa-search"></i> Search</button>
+        </div>
+      </form>
+      <form name="jobsearch2" class="form-inline" id="form2" onsubmit="return validate_form();">
+          <div class="form-check form-check-inline p-2">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+              <label class="form-check-label" for="inlineCheckbox1">Part Time</label>
+            </div>
+            <div class="form-check form-check-inline p-2">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+              <label class="form-check-label" for="inlineCheckbox2">Full Time/Casual/Freelance</label>
+            </div>
+            <div class="dropdown p-2">
+                <select id="select">
+                <option value="">Select your location</option>
+                <option value="location1">location1</option>
+                <option value="location2">location2</option>
+                <option value="location3">location3</option>
+                <option value="location4">location4</option>
+            </select>
+            </div>
+            <input type="submit" class="btn" id="validate1">
+      </form>  
+    </div><!--Section1 Container Ends-->
+    </div><!--Jumbotron Banner Ends-->
+    <!-- Section 2 -->
+    <div class="container p-3" id="section2">
+        <p class="leaders-text">We're leaders in</p>
+        <p class="creative-text">Creative Digital Recruitment</p>
+        <hr class="hr" />
+        <p id="para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.</p>
+        <p class="para2" style="display: none;text-align: justify;">LoremLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+        <a href="#para2" id="readless">Read Less</a></p>
+        <input type="button" id="input" class="btn btn-lg findout" value="Read More About Us" />
+    </div>
+    <!-- Section 2 Ends -->
+    <!-- Section 3 -->
+    <div class="jumbotron banner2" id="section3">
+        <form name="jobsearch" class="form-inline">       
+            <label class="subscribe-text">Subscribe to our job seeker mailing list</label>
+            <input type="email" name="email" class="form-control" name="Subscription" id="subscribe-box" required>
+            <div class="input-group-btn">
+                <button type="submit"  onclick="ValidateEmail(document.jobsearch.email)" id="job-search-button" role="submit" aria-label="submit" class="btn" id="subscribe"> 
+                  <i class="fas fa-envelope"></i></button>
+            </div>
+          </form>
+    </div>
+    <!-- Section 3 Ends -->
+</body>
+</html>
