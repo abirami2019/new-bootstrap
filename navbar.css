@@ -1,0 +1,162 @@
+body{
+    margin: 0%;
+}
+.navbar-right{
+    margin-left:50%;
+    font-family: 'Times New Roman', Times, serif;;
+}
+.banner1,.banner2{
+    background-color: rgb(95, 19, 114);
+    background-size: cover;
+}
+.looking-text{
+    font-style: italic;
+    color:white;
+    font-size: 7vmin;
+    margin-top: 7%;
+}
+#job-description-inputbox{
+    width:75%;
+}
+#job-search-button{
+    background-color: whitesmoke;
+    color:black;
+    font-weight: 100;
+}
+#validate1{
+    background-color: whitesmoke;
+    color:black;
+    font-weight: 100;
+}
+.leaders-text{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 7vmin;
+    color:black;
+    font-style: italic;
+}
+.creative-text{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-size: 8vmin;
+    color:black;
+}
+#section2{
+    text-align: center;
+}
+.hr{
+    background-color: rgb(95, 19, 114);
+    width: 20vw;
+    height:1vh;
+
+}
+.findout{
+    border: 2px solid  rgb(95, 19, 114);
+    color:  rgb(95, 19, 114);  
+  }
+.findout:hover
+{
+    border: 2px solid black;
+    color:  rgb(95, 19, 114);  
+    background-color: white;
+  
+}
+#form2{
+    
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+    font-size: 3vmin;
+}
+#subscribe-box{
+    width:50%;
+}
+.subscribe-text{
+    font-family: 'Times New Roman', Times, serif;
+    color:white;
+    font-size: 5vmin;
+    margin-left: 30%;
+    align-items: center;
+}
+#subscribe-box{
+    margin-left: 30%;
+    width: 35%;
+}
+
+.skip_to_main{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    top: -3em;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.5em 0.75em;
+}
+.skip_to_main:focus{
+    top:0;
+}
+
+
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 700px) {
+    .navbar-right{
+        font-size: 5vmin;
+        padding: 0% 0% 0% 0%;
+        margin-left: 0%;
+    }
+    #para1{
+        text-align: justify;
+    }
+
+    .subscribe-text{
+        margin-left: 10%;
+    }
+    #subscribe-box{
+        margin-left: 10%;
+        width: 65%;
+    }
+    #form2{
+    
+        font-family: 'Times New Roman', Times, serif;
+        color:white;
+        font-size: 4vmin;
+    }
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 701px) and (max-width: 991px) {
+    .navbar-right{
+        font-size: 3.5vmin;
+    }
+    .banner1{
+        height:550px;
+    }
+    #para1{
+        text-align: justify;
+    }
+    
+    .subscribe-text{
+        margin-left: 10%;
+    }
+    #subscribe-box{
+        margin-left: 15%;
+        width: 65%;
+    }
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-right{
+        font-size: 3.5vmin;
+    }
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
+    .navbar-right{
+        font-size: 3.5vmin;
+    }
+    .banner1{
+        height:650px;
+    }
+}
